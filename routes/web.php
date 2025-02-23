@@ -22,7 +22,7 @@ Route::group(['prefix'=>'admin'],function(){
 Route::get('backend/dashboard',[BackendDashboardController::class,'dashboard'])->name('backend.dashboard');
 Route::get('backend/transaction',[TransactionController::class,'transac'])->name('backend.transaction');
 Route::get('transaction/form',[TransactionController::class,'transacform'])->name('transaction.form');
-Route::get('transaction/store',[TransactionController::class,'store'])->name('transaction.store');
+Route::post('transaction/store',[TransactionController::class,'store'])->name('transaction.store');
 Route::get('/transaction/edit/{id}',[BackendDashboardController::class,'edit'])->name('transaction.edit');
 Route::post('/transaction/update/{id}',[BackendDashboardController::class,'update'])->name('transaction.update');
 

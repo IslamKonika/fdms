@@ -5,12 +5,16 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class DashboardController extends Controller
 {
     public function dashboard(){
-        $transactions=Transaction::all();
-        return view('backend.dashboard',compact('transactions'));
+        $transaction_sum = Transaction::select('name', 'email', DB::raw('SUM(amount) as total_amount'))
+            ->groupBy('name', 'email')
+            ->get();
+        return view('backend.dashboard',compact('transaction_sum'));
     }
 
     public function edit($id){
@@ -32,7 +36,7 @@ class DashboardController extends Controller
        'name'=>$request->name,
        'amount'=>$request->amount,
        'project_name'=>$request->project_name
-       
+
 
        ]);
 

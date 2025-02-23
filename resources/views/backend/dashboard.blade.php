@@ -159,8 +159,8 @@ a:hover {
                 <li><a href="{{route('backend.transaction')}}">Transaction</a></li>
                 <li><a href="{{route('backend.product')}}">Product</a></li>
                 <li><a href="{{route('backend.customer')}}">Customer</a></li>
-            
-                
+
+
             </ul>
         </nav>
         <div class="main-content">
@@ -173,30 +173,33 @@ a:hover {
             </header>
             <div class="content">
 
-               
+
   <table>
   <thead>
   <tr>
       <th scope="col">id</th>
       <th scope="col">Name</th>
-      <th scope="col">Amount</th>
+      <th scope="col">email</th>
+      <th scope="col">total</th>
       <th scope="col">Action</th>
   </tr>
   </thead>
   <tbody>
-  @foreach($transactions as $data)
+  @foreach($transaction_sum as  $index=>$data)
     <tr>
-      <th scope="row">{{$data->id}}</th>
+      <th scope="row">{{$index+1}}</th>
       <td>{{$data->name}}</td>
-      <td>{{$data->amount}}</td>
+      <td>{{$data->email}}</td>
+      <td>{{$data->total_amount}}</td>
       <td>
-      
-      <a href="{{route('transaction.edit',$data->id)}}" class="btn btn-success">Edit</a>
-   
+
+      <a href="#" class="btn btn-success">Edit</a>
+      <a href="#" class="btn btn-success">view</a>
+
       </td>
-  
+
     </tr>
-    
+
   </tbody>
   @endforeach
   </tbody>

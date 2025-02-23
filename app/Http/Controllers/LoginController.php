@@ -13,8 +13,7 @@ class LoginController extends Controller
     }
 
     public function registration(){
-        $customers=Customer::all();
-        return view('registration',compact('customers'));
+        return view('registration');
     }
 
     public function store(Request $request){

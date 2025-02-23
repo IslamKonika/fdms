@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string('name', 30);
+            $table->string('email', 30);
             $table->decimal('amount', 10, 2);
             $table->string('project_name',100);
             $table->timestamps();
         });
-        
+
     }
 
     /**

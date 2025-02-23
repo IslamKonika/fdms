@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Customer;
 
 class CustomerController extends Controller
 {
     public function customer(){
-       
-        return view('backend.customer-table');
+       $customers=Customer::all();
+        return view('backend.customer-table',compact('customers'));
 
     }
 }
