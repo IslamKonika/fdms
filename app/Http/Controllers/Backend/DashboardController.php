@@ -13,6 +13,7 @@ class DashboardController extends Controller
     public function dashboard(){
         $transaction_sum = Transaction::select('name', 'email', DB::raw('SUM(amount) as total_amount'))
             ->groupBy('name', 'email')
+            ->orderByDesc('total_amount')
             ->get();
         return view('backend.dashboard',compact('transaction_sum'));
     }

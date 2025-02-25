@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email', 30);
             $table->decimal('amount', 10, 2);
             $table->string('project_name',100);
+            $table->string('station_name',50);
+            $table->decimal('station_amount',10,2);
             $table->timestamps();
         });
 

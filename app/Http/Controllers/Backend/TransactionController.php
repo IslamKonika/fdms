@@ -32,6 +32,8 @@ class TransactionController extends Controller
             'name' => 'required|string',
             'amount' => 'required|numeric',
             'project_name' => 'required|string',
+            'station_name'=>'required|string',
+            'station_amount'=>'required|numeric'
         ]);
 
         $customer = Customer::whereEmail($request->email)->first();
@@ -41,6 +43,7 @@ class TransactionController extends Controller
                 'name' => $request->name,
                 'amount' => $request->amount,
                 'project_name' => $request->project_name,
+                'station_name'=>$request->station_name
             ]);
             flash()->success('Succssfully added.');
             return back();

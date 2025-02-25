@@ -10,6 +10,7 @@ use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 // frontend Route
+
 Route::get('/login',[LoginController::class,'login'])->name('frontend.login');
 Route::post('/login/store',[LoginController::class,'sto'])->name('customer.login');
 Route::get('/logout',[LoginController::class,'logout'])->name('customer.logout');
@@ -17,6 +18,8 @@ Route::get('/registration',[LoginController::class,'registration'])->name('front
 Route::post('/registration/store',[LoginController::class,'store'])->name('registration.store');
 Route::get('/',[HomeController::class,'home'])->name('home');
 Route::get('/dashboard',[DashboardController::class,'index'])->name('frontend.dashboard');
+
+
 // admin prefix
 Route::group(['prefix'=>'admin'],function(){
 Route::get('backend/dashboard',[BackendDashboardController::class,'dashboard'])->name('backend.dashboard');
