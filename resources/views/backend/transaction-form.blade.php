@@ -152,15 +152,7 @@ is-invalid
                 <span class="text-danger">{{ $message }}</span>
             @enderror
 
-             <br>
-             <label for="stationAmount">station Amount</label>
-             <input type="text" id="stationAmount" name="station_amount" placeholder="station amount"
-                 class="form-control  @error('station_amount')
-             is-invalid
-         @enderror">
-             @error('station_amount')
-                 <span class="text-danger">{{ $message }}</span>
-             @enderror
+
 
               <br>
             <!-- chatgpt -->

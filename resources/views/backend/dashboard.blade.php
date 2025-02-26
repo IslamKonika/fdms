@@ -181,6 +181,7 @@ a:hover {
       <th scope="col">Name</th>
       <th scope="col">email</th>
       <th scope="col">total</th>
+      <th scope="col">station name</th>
       <th scope="col">Action</th>
   </tr>
   </thead>
@@ -191,6 +192,7 @@ a:hover {
       <td>{{$data->name}}</td>
       <td>{{$data->email}}</td>
       <td>{{$data->total_amount}}</td>
+      <td>{{$data->station_name}}</td>
       <td>
 
       <a href="#" class="btn btn-success">Edit</a>

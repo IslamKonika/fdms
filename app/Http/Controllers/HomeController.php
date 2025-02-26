@@ -17,12 +17,12 @@ class HomeController extends Controller
             ->orderByDesc('total_amount')
             ->get();
 
-        $station_sum = Transaction::select('station_name', 'email', DB::raw('SUM(station_amount) as total_amount'))
+        $station_sum = Transaction::select('station_name', 'email', DB::raw('SUM(amount) as total_amount'))
             ->groupBy('station_name', 'email')
             ->orderByDesc('total_amount')
             ->get();
 
-         $total_sales = Transaction::sum('amount','station_amount');
+        $total_sales = Transaction::sum('amount');
 
 
         return view('welcome',compact('transactions','product','transaction_sum','total_sales','station_sum'));
