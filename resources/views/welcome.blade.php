@@ -72,7 +72,9 @@
         </div>
 
         <div class="main-sales">
+            <h4>sales wise station</h4>
             <div class="sales">
+                <div class="sales-items">
                 @foreach($station_sum->chunk(2) as $chunk)
                     <div class="one">
                         @foreach($chunk as $transaction)
@@ -85,8 +87,9 @@
                     </div>
                 @endforeach
             </div>
+            </div>
 
-
+             <h4>weekly hero</h4>
              <div class="weekly-hero">
 
                 <div class="weekly">
@@ -105,7 +108,7 @@
 
                         <div class="totalss2">
                             <p>Total Sales <br>
-                            <span> $5,000</span>
+                            <span> ${{ number_format($total_sales, 2) }}</span>
 
                         </div>
 
@@ -120,8 +123,11 @@
                     <br>
 
 
+        <div class="ftop">
+             <div><h4>Top 3 Quotation Provider (Monthly)</h4></div>
 
         <div class="top">
+
 
         <div class="image">
 
@@ -157,7 +163,7 @@
 
         </div>
 
-
+        <h4>Team Wise Sales</h4>
         <div class="top1">
 
             <div class="image1">
@@ -166,7 +172,7 @@
 
                 <img src="image/99b49342a201f3f61fc846ce2d402c4d.jpg">
                 <p>Sales Falcon</p>
-                <p>"45"</p>
+                <p>$10,000</p>
 
 
 
@@ -176,7 +182,7 @@
 
                 <img src="image/9afee9df2505e2f10742d3f0208a6f3d.jpg" alt="">
                 <p>Sales Shark</p>
-                <p>"40"</p>
+                <p>$10,000</p>
 
 
             </div>
@@ -185,7 +191,7 @@
 
                 <img src="image/4c43d2799a310e63245864768626dc73.jpg" alt="">
                 <p>Sales Chrocodile</p>
-                <p>"35"</p>
+                <p>$10,000</p>
 
 
             </div>
@@ -213,5 +219,6 @@
 
 
     </div>
+</div>
 </body>
 </html>

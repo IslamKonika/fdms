@@ -3,18 +3,23 @@
     height: 900px;
     width: 100%;
    display: flex;
+   overflow: hidden;
 }
 
 .left{
     background-color: rgb(141, 203, 214);
-    height: 500px;
+    height: 700px;
     width: 700px;
     padding:10px 15px ;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     margin-left: 50px;
-    margin-top: 40px;
+    margin-top: 70px;
     border-radius: 20px;
 
+}
+
+.main-sales h3{
+   text-align: justify;
 }
 
 .sales{
@@ -81,6 +86,10 @@
     border: none;
 }
 
+.main-sales h4{
+    margin-left: 30px;
+
+}
 
 .sales {
     background-color: #317B95;
@@ -89,7 +98,7 @@
     padding: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     margin-left: 50px;
-    margin-top: 40px;
+    margin-top: 10px;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -97,7 +106,17 @@
     justify-content: center;
     align-items: center;
 }
+.sales-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
+.sales-item {
+    margin: -3px; /* Reduce margin */
+    text-align: center;
+}
 .one {
     display: flex;
     justify-content: space-between;
@@ -129,8 +148,9 @@
     width: 300px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     margin-left: 50px;
-    margin-top: 40px;
+    margin-top: 0px;
     border-radius: 20px;
+   overflow: hidden;
 
 }
 
@@ -170,11 +190,19 @@
 
 }
 
+.totalss2 span{
+    color: #317B95;
+}
+
 .totalss1  span{
     text-align: center;
     justify-content: center;
 
 }
+.ftop h4{
+    margin-left: 30px;
+}
+
 
 .top{
     background-color: #317B95;
@@ -182,7 +210,7 @@
     width: 430px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     margin-left: 50px;
-    margin-top: 40px;
+    margin-top: 20px;
     border-radius: 20px;
 }
 
@@ -211,7 +239,7 @@
     width: 430px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     margin-left: 8px;
-    margin-top: 40px;
+    margin-top: 20px;
     border-radius: 20px;
 }
 .image1{
@@ -251,7 +279,7 @@
 }
 
 .total h1{
-    background-color: aliceblue;
+    background-color: #D9D9D9;
     height: 50px;
     width: 200px;
     border-top-left-radius: 30px;
@@ -259,7 +287,7 @@
 }
 
 .total h2{
-    background-color: aliceblue;
+    background-color: #D9D9D9;
     height: 50px;
     width: 130px;
     border-top-right-radius: 30px;
@@ -267,6 +295,7 @@
     text-align: center;
     padding-top: 10px;
     box-sizing: border-box;
+    color: #317B95;
 
 
 }
@@ -276,4 +305,6 @@
     margin-right: 10px;
     margin-top: 20px;
     margin-left: 10px;
+    height: 150px;
+    width: 440px;
 }

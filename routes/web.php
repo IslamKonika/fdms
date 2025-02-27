@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\DashboardController as BackendDashboardController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\TransactionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -36,6 +37,11 @@ Route::post('product/store',[ProductController::class,'store'])->name('product.s
 
 // customer backend
 Route::get('/backend/customer',[CustomerController::class,'customer'])->name('backend.customer');
+
+// team
+Route::get('/backend/team',[TeamController::class,'team'])->name('backend.team');
+Route::get('/team/from',[TeamController::class,'form'])->name('team.form');
+Route::post('/team/store',[TeamController::class,'store'])->name('team.store');
 
 
 });

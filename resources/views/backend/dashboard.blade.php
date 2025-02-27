@@ -26,7 +26,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #343a40;
+    background-color: #880000;
     color: white;
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@ body {
 .sidebar-header {
     padding: 20px;
     text-align: center;
-    background-color: #007bff;
+    background-color: #420303;
 }
 
 .sidebar-menu {
@@ -54,7 +54,7 @@ body {
 }
 
 .sidebar-menu li:hover {
-    background-color: #007bff;
+    background-color: #ac0f9f;
 }
 
 .main-content {
@@ -68,12 +68,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #e71e1e;
     border-bottom: 1px solid #dee2e6;
 }
 
 .topbar h1 {
     margin: 0;
+    color: #fff;
 }
 
 .user-info {
@@ -159,6 +160,7 @@ a:hover {
                 <li><a href="{{route('backend.transaction')}}">Transaction</a></li>
                 <li><a href="{{route('backend.product')}}">Product</a></li>
                 <li><a href="{{route('backend.customer')}}">Customer</a></li>
+                <li><a href="{{route('backend.team')}}">Team-memeber</a></li>
 
 
             </ul>
