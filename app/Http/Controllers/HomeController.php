@@ -18,7 +18,7 @@ class HomeController extends Controller
         $transactions=Transaction::whereMonth('created_at', $currentMonth)
                                     ->whereYear('created_at', $currentYear)
                                     ->get();
-        $product=Product::all();
+
 
         $transaction_sum = Transaction::select('name', 'email', DB::raw('SUM(amount) as total_amount'))
             ->whereMonth('created_at', $currentMonth)
@@ -34,13 +34,20 @@ class HomeController extends Controller
             ->orderByDesc('total_amount')
             ->get();
 
+
+        $team_totals = Transaction::select('team_name', DB::raw('SUM(amount) as total_amount'))
+            ->whereMonth('created_at', $currentMonth)
+            ->whereYear('created_at', $currentYear)
+            ->groupBy('team_name')
+            ->get();
+
         $total_sales = Transaction::
                                 whereMonth('created_at', $currentMonth)
                                 ->whereYear('created_at', $currentYear)
                                 ->sum('amount');
 
 
-        return view('welcome',compact('transactions','product','transaction_sum','total_sales','station_sum'));
+        return view('welcome',compact('transactions','transaction_sum','total_sales','station_sum','team_totals'));
     }
 
 

@@ -163,43 +163,19 @@
 
         </div>
 
-        <h4>Team Wise Sales</h4>
-        <div class="top1">
-
-            <div class="image1">
-
-            <div class="images-left1">
-
-                <img src="image/99b49342a201f3f61fc846ce2d402c4d.jpg">
-                <p>Sales Falcon</p>
-                <p>$10,000</p>
-
-
-
-            </div>
-
-            <div class="images-left1">
-
-                <img src="image/9afee9df2505e2f10742d3f0208a6f3d.jpg" alt="">
-                <p>Sales Shark</p>
-                <p>$10,000</p>
-
-
-            </div>
-
-            <div class="images-left1">
-
-                <img src="image/4c43d2799a310e63245864768626dc73.jpg" alt="">
-                <p>Sales Chrocodile</p>
-                <p>$10,000</p>
-
-
-            </div>
-
-
-
-            </div>
+        <h4 style="color: #000;">Team Wise Sales</h4>
+<div class="top1">
+    <div class="image1">
+        @foreach($team_totals as $transaction)
+        <div class="images-left1">
+            <img src="image/99b49342a201f3f61fc846ce2d402c4d.jpg" alt="Team Image">
+            <p class="team-name">{{$transaction->team_name}}</p>
+            <p class="amount">${{ number_format($transaction->total_amount, 2) }}</p>
         </div>
+        @endforeach
+    </div>
+</div>
+
 
         <div class="top2">
 

@@ -165,6 +165,22 @@ is-invalid
                 <span class="text-danger">{{ $message }}</span>
             @enderror
             <br>
+
+         {{-- team --}}
+            <label for="teamName">Team_Name</label>
+            <select id="teamName" name="team_name" class="form-control @error('team_name') is-invalid @enderror">
+                <option value="">Select Station</option>
+                <option value="Sales Falcon">Sales Falcon</option>
+                <option value="Sales Shark">Sales Shark</option>
+            <option value="Sales Crocodile">Sales Crocodile</option>
+            </select>
+        @error('team_name')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+        <br>
+
+
+
             <input type="submit" value="Submit">
         </form>
     </div>

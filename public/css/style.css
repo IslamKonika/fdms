@@ -233,32 +233,55 @@
     text-align: center;
     margin-top: -10px;
 }
-.top1{
+.top1 {
     background-color: #317B95;
-    height: 200px;
-    width: 430px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; 
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    margin-left: 8px;
-    margin-top: 20px;
+    margin: 20px auto;
     border-radius: 20px;
+    text-align: center;
 }
-.image1{
+
+.image1 {
     display: flex;
-    overflow: hidden;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-.images-left1 img{
+
+.images-left1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.images-left1 img {
     height: 100px;
     width: 100px;
-    border-radius: 100px;
-    padding: 20px;
-    overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
-.images-left1 p{
-    color: white !important;
-    font-family:Arial, Helvetica, sans-serif ;
+
+.images-left1 p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-top: -10px;
+    margin: 5px 0;
+    font-weight: bold;
 }
+
+.team-name {
+    font-size: 14px;
+}
+
+.amount {
+    font-size: 16px;
+}
+
 .top2{
 
     background-color: #317B95;

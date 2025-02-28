@@ -151,63 +151,49 @@ a:hover {
 </head>
 <body>
     <div class="dashboard-container">
-        <nav class="sidebar">
-            <div class="sidebar-header">
-                <h2>Menu</h2>
-            </div>
-            <ul class="sidebar-menu">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="{{route('backend.transaction')}}">Transaction</a></li>
-                <li><a href="{{route('backend.product')}}">Product</a></li>
-                <li><a href="{{route('backend.customer')}}">Customer</a></li>
-                <li><a href="{{route('backend.team')}}">Team-memeber</a></li>
 
+      {{-- sidebar --}}
+     @include('backend.fixed.sidebar')
 
-            </ul>
-        </nav>
         <div class="main-content">
-            <header class="topbar">
-                <h1>Dashboard</h1>
-                <div class="user-info">
-                    <p>Welcome, User</p>
-                    <a href="#">Logout</a>
-                </div>
-            </header>
+            {{-- header --}}
+
+         @include('backend.fixed.header')
             <div class="content">
 
 
-  <table>
-  <thead>
-  <tr>
-      <th scope="col">id</th>
-      <th scope="col">Name</th>
-      <th scope="col">email</th>
-      <th scope="col">total</th>
-      <th scope="col">station name</th>
-      <th scope="col">Action</th>
-  </tr>
-  </thead>
-  <tbody>
-  @foreach($transaction_sum as  $index=>$data)
-    <tr>
-      <th scope="row">{{$index+1}}</th>
-      <td>{{$data->name}}</td>
-      <td>{{$data->email}}</td>
-      <td>{{$data->total_amount}}</td>
-      <td>{{$data->station_name}}</td>
-      <td>
+           {{-- body --}}
 
-      <a href="#" class="btn btn-success">Edit</a>
-      <a href="#" class="btn btn-success">view</a>
+           <table>
+            <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">email</th>
+                <th scope="col">total</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($transaction_sum as  $index=>$data)
+              <tr>
+                <th scope="row">{{$index+1}}</th>
+                <td>{{$data->name}}</td>
+                <td>{{$data->email}}</td>
+                <td>{{$data->total_amount}}</td>
+                <td>
 
-      </td>
+                <a href="#" class="btn btn-success">Edit</a>
+                <a href="#" class="btn btn-success">view</a>
 
-    </tr>
+                </td>
 
-  </tbody>
-  @endforeach
-  </tbody>
-</table>
+              </tr>
+
+            </tbody>
+            @endforeach
+            </tbody>
+          </table>
 
             </div>
         </div>

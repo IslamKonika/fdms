@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
             $table->string('team_name',30);
-            $table->decimal('amount',10,2);
+            $table->decimal('amount',10,0);
             $table->timestamps();
         });
     }

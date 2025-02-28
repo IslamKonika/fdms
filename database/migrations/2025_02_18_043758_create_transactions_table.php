@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('amount', 10, 2);
             $table->string('project_name',100);
             $table->string('station_name',50);
+            $table->string('team_name',50);
             $table->timestamps();
         });
 

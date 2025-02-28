@@ -14,14 +14,14 @@ class TransactionController extends Controller
     public function transac()
     {
 
-        return view('backend.transaction');
+        return view('backend.pages.transaction');
     }
 
 
     public function transacform(Request $request)
     {
 
-        return view('backend.transaction-form');
+        return view('backend.pages.transaction-form');
     }
 
 
@@ -33,6 +33,7 @@ class TransactionController extends Controller
             'amount' => 'required|numeric',
             'project_name' => 'required|string',
             'station_name'=>'required|string',
+            'team_name'=>'required|string'
 
         ]);
 
@@ -44,6 +45,9 @@ class TransactionController extends Controller
                 'amount' => $request->amount,
                 'project_name' => $request->project_name,
                 'station_name'=>$request->station_name,
+                'team_name'=>$request->team_name
+
+
 
             ]);
             flash()->success('Succssfully added.');

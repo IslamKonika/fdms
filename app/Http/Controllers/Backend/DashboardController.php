@@ -15,13 +15,13 @@ class DashboardController extends Controller
             ->groupBy('name', 'email')
             ->orderByDesc('total_amount')
             ->get();
-        return view('backend.dashboard',compact('transaction_sum'));
+        return view('backend.pages.dashboard',compact('transaction_sum'));
     }
 
     public function edit($id){
 
         $transaction=Transaction::find($id);
-        return view('backend.transaction-edit',compact('transaction'));
+        return view('backend.pages.transaction-edit',compact('transaction'));
 
     }
 
@@ -41,7 +41,7 @@ class DashboardController extends Controller
 
        ]);
 
-       return redirect()->route('backend.dashboard');
+       return redirect()->route('backend.pages.dashboard');
 
 
 

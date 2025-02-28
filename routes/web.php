@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\CustomerController;
 use App\Http\Controllers\Backend\DashboardController as BackendDashboardController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\QuotationController;
 use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\TransactionController;
 use App\Http\Controllers\DashboardController;
@@ -30,10 +31,7 @@ Route::post('transaction/store',[TransactionController::class,'store'])->name('t
 Route::get('/transaction/edit/{id}',[BackendDashboardController::class,'edit'])->name('transaction.edit');
 Route::post('/transaction/update/{id}',[BackendDashboardController::class,'update'])->name('transaction.update');
 
-// product Route
-Route::get('/backend/product',[ProductController::class,'product'])->name('backend.product');
-Route::get('product/form',[ProductController::class,'form'])->name('product.form');
-Route::post('product/store',[ProductController::class,'store'])->name('product.store');
+// Quotation Route
 
 // customer backend
 Route::get('/backend/customer',[CustomerController::class,'customer'])->name('backend.customer');

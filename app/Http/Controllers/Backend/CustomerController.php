@@ -10,7 +10,7 @@ class CustomerController extends Controller
 {
     public function customer(){
        $customers=Customer::all();
-        return view('backend.customer-table',compact('customers'));
+        return view('backend.pages.customer-table',compact('customers'));
 
     }
 }

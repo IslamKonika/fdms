@@ -11,12 +11,12 @@ class TeamController extends Controller
 {
     public function team()
     {
-        return view('backend.team');
+        return view('backend.pages.team');
     }
 
     public function form()
     {
-        return view('backend.team-form');
+        return view('backend.pages.team-form');
     }
 
     public function store(Request $request)
